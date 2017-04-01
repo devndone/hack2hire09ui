@@ -2,7 +2,7 @@ import { play } from 'vue-play'
 import Star from '../components/Star'
 import ItemBox from '../components/ItemBox'
 import DBSHeader from '../components/DBSHeader'
-import RS from '../components/RS'
+import RSUi from '../components/RSUi'
 
 
 play('MyButton')
@@ -24,4 +24,4 @@ play('MyButton')
     .add('Normal',h=>h(DBSHeader))
 
         play('HOME')
-        .add('Normal',h=>h(RS))
+        .add('Normal',h=>h(RSUi))

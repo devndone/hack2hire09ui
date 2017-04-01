@@ -1,9 +1,8 @@
 <template>
 <div class="recomm_items">
     <div class="rc_item_inner">
-      <RecmDescitem />
-          <RecmDescitem />
-              <RecmDescitem />
+          <span>  Venue  </span>    : <span> Trident </span>
+              <span>  Location  </span>    : <span> Trident </span>
           <Star />
 
     </div>
@@ -11,13 +10,10 @@
 </template>
 
 <script>
-
-import RecmDescitem from './RecmDescitem'
 import Star from './Star'
 export default
 {
   components: {
-      RecmDescitem,
       Star
        }
 }
@@ -30,7 +26,7 @@ export default
 
 }
 .rc_item_inner{
-  //  padding: 10px;
+  padding: 10px;
 
     text-align: center;
     box-shadow: 0px 0px 2px lightgrey;

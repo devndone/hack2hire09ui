@@ -5,6 +5,7 @@
       USERS
     </h1>
     <ul class="users">
+      <nuxt-link to="/rs">RSS</nuxt-link>
       <li v-for="(user, index) in users" class="user">
         <nuxt-link :to="{ name: 'id', params: { id: index }}">
           {{ user.name }}

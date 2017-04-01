@@ -5,12 +5,8 @@
               <div class="recomm_inner container">
                 <ItemDetText />
 
-          <ItemBox />
-                    <ItemBox />
-                              <ItemBox />
-                                        <ItemBox />
-                                                  <ItemBox />
-                                                            <ItemBox />
+                <InfiniteLazy />
+
         </div>
         </div>
         </div>
@@ -21,13 +17,15 @@
 import ItemBox from './ItemBox'
 import DBSHeader from './DBSHeader'
 import ItemDetText from './ItemDetText'
+import InfiniteLazy from './InfiniteLazy'
 
 export default
 {
   components: {
            ItemBox,
            DBSHeader,
-           ItemDetText
+           ItemDetText,
+           InfiniteLazy
        }
 }
 

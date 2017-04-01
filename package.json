@@ -6,20 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "nodemon -w server.js -w nuxt.config.js -w api/ --exec babel-node server.js  --presets es2015",
-    "build": "npm run clean && npm run build-server && npm run build-client",
-    "start": "npm run deploy",
+    "build": "nuxt build && babel -s -D . --ignore node_modules --presets es2015 --plugins babel-plugin-transform-runtime -d .nuxt/",
+    "start": "NODE_ENV=production HOST=0.0.0.0 PORT=8080 node server.js --env production",
     "precommit": "npm run lint",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "clean": "rm -rf build",
-    "build-client": "nuxt build && cp -R .nuxt build/",
-    "build-server": "babel -s -D . --ignore node_modules --presets es2015 --plugins babel-plugin-transform-runtime -d build/",
-    "pm2-delete": "pm2 delete all",
-    "pm2-status": "pm2 status",
-    "pm2-logs": "pm2 logs",
-    "pm2-run": "NODE_ENV=production HOST=0.0.0.0 PORT=8080 node build/server.js --env production",
-    "pm2-rerun": "pm2 restart dbs",
-    "deploy": "npm install && npm run build && npm run pm2-run",
-    "redeploy": "npm install && npm run build && npm run pm2-rerun",
     "play": "vbuild -c play.config.js -d",
     "build:play": "vbuild -c play.config.js"
   },
@@ -34,7 +24,8 @@
     "cross-env": "^3.1.4",
     "express": "^4.14.0",
     "logatim": "^0.9.0",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "vue-infinite-loading": "^2.0.3"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
@@ -47,8 +38,8 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "nodemon": "^1.11.0",
-    "pm2": "^2.4.0",
     "vbuild": "^6.24.13",
-    "vue-play": "^3.1.3"
+    "vue-play": "^3.1.3",
+    "vue-star-rating": "^1.2.2"
   }
 }
