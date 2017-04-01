@@ -6,14 +6,13 @@
   "private": true,
   "scripts": {
     "dev": "nodemon -w server.js -w nuxt.config.js -w api/ --exec babel-node server.js  --presets es2015",
-    "build": "nuxt build && babel server.js --out-file server.prod.js",
+    "build": "npm run clean && npm run build-server && npm run build-client",
     "start": "npm run deploy",
     "precommit": "npm run lint",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "clean": "rm -rf build",
     "build-client": "nuxt build && cp -R .nuxt build/",
     "build-server": "babel -s -D . --ignore node_modules --presets es2015 --plugins babel-plugin-transform-runtime -d build/",
-    "build": "npm run clean && npm run build-server && npm run build-client",
     "prod": "NODE_ENV=production node build/server.js",
     "pm2-delete": "pm2 delete all",
     "pm2-status": "pm2 status",
@@ -21,7 +20,9 @@
     "pm2-run": "NODE_ENV=production node build/server.js --env production",
     "pm2-rerun": "pm2 restart dbs",
     "deploy": "npm install && npm run build && npm run pm2-run",
-    "redeploy": "npm install && npm run build && npm run pm2-rerun"
+    "redeploy": "npm install && npm run build && npm run pm2-rerun",
+    "play": "vbuild -c play.config.js -d",
+    "build:play": "vbuild -c play.config.js"
   },
   "babel": {
     "presets": [
@@ -33,8 +34,8 @@
     "axios": "^0.15.3",
     "cross-env": "^3.1.4",
     "express": "^4.14.0",
-    "nuxt": "latest",
-    "logatim": "^0.9.0"
+    "logatim": "^0.9.0",
+    "nuxt": "latest"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
@@ -47,6 +48,8 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "nodemon": "^1.11.0",
-    "pm2": "^2.4.0"
+    "pm2": "^2.4.0",
+    "vbuild": "^6.24.13",
+    "vue-play": "^3.1.3"
   }
 }
