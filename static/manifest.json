@@ -1,6 +1,7 @@
 {
-  "name": "NextSimpleStarter",
-  "short_name": "Next SS",
+  "name": "DBS Hackathon 09",
+  "short_name": "DBS RS",
+  "description": "A Progressive Web app built for recommendation systems",
   "icons": [
     {
       "src": "img/apple-touch-icon-120x120.png",
@@ -8,28 +9,28 @@
       "type": "image/png"
     },
     {
-      "src": "img/apple-touch-icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png"
-    },
-    {
-      "src": "img/android-chrome-144x144.png",
+      "src": "img/apple-touch-icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "img/android-chrome-192x192.png",
-      "sizes": "192x192",
+      "src": "img/mstile-150x150.png",
+      "sizes": "150x150",
       "type": "image/png"
     },
     {
-      "src": "img/splashscreen-icon-384x384.png",
-      "sizes": "384x384",
+      "src": "img/mstile-310x150.png",
+      "sizes": "310x150",
+      "type": "image/png"
+    },
+    {
+      "src": "img/mstile-310x310.png",
+      "sizes": "310x310",
       "type": "image/png"
     }
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#673ab7",
-  "background_color": "#EEE"
+  "theme_color": "#f20018",
+  "background_color": "#1e1e1e"
 }

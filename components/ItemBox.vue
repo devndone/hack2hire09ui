@@ -26,7 +26,7 @@ export default
 
 }
 .rc_item_inner{
-  padding: 10px;
+  padding: 86px;
 
     text-align: center;
     box-shadow: 0px 0px 2px lightgrey;
