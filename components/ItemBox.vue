@@ -1,12 +1,22 @@
 <template>
+
 <div class="recomm_items">
-    <div class="rc_item_inner">
-          <span>  Venue  </span>    : <span> Trident </span>
-              <span>  Location  </span>    : <span> Trident </span>
+  <div class="rc_item_inner">
+                           <div>
+                               <span> Hotel name </span> : <span> Trident </span>
+                           </div>
+                           <div>
+                             <span>  Venue  </span>    : <span> Trident </span>
+                           </div>
+                           <div>
+                               <span>  Hotel name </span> : <span> Trident </span>
+                           </div>
+
           <Star />
 
     </div>
 </div>
+
 </template>
 
 <script>
@@ -26,8 +36,8 @@ export default
 
 }
 .rc_item_inner{
-  padding: 86px;
-
+  //  padding: 10px;
+    border: 1px solid lightgray;
     text-align: center;
     box-shadow: 0px 0px 2px lightgrey;
 
@@ -37,7 +47,6 @@ export default
        padding: 10px;
             display: inline-block;
           width: 90%;
-            border: 1px solid lightgray;
 
 
 }
@@ -84,6 +93,15 @@ span{
 
     }
 }
+
+
+
+
+
+
+
+
+
 .rate {
   border: 1px solid transparent;
   float: left;
